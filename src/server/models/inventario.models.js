@@ -44,8 +44,7 @@ export const prepararHATEOAS = (result) => {
   const stockTotal = result.reduce((total, j) => total + j.stock, 0)
   const results = result.map((j) => ({
     name: j.nombre,
-    href: `${process.env.RUTA}/joyas/${j.id}`,
-    stock: j.stock
+    href: `${process.env.RUTA}/joyas/${j.id}`
   }))
 
   return {
