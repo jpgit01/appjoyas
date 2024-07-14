@@ -2,7 +2,7 @@ import db from '../database/db_connect.js'
 import 'dotenv/config'
 import format from 'pg-format'
 
-export const findAll = async ({ limits = 6, page = 1, order_by = 'stock_ASC', precio_min, precio_max, categoria, metal}) => {
+export const findAll = async ({ limits = 6, page = 1, order_by = 'stock_ASC', precio_min, precio_max, categoria, metal }) => {
   let query = 'SELECT * FROM inventario'
   const filtros = []
   const values = []
